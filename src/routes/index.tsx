@@ -1,9 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
+import HomePage from '../pages/HomePage'
 
 export const Route = createFileRoute('/')({
-  component: Index,
+  component: HomePage,
 })
-
-function Index() {
-  return <div>Home</div>
-}
