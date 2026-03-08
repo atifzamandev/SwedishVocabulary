@@ -11,7 +11,7 @@ export default function HomePage() {
       <Header />
 
       {/* ── Main ─────────────────────────────────────────── */}
-      <main className="bg-hero-gradient flex-1 flex flex-col">
+      <main className="bg-hero-image flex-1 flex flex-col">
         {/* Hero */}
         <HeroSection />
 

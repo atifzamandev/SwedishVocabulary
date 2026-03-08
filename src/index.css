@@ -173,6 +173,15 @@
   );
 }
 
+@utility bg-hero-image {
+  background-image:
+    linear-gradient(to bottom, rgba(46, 102, 182, 0.25) 0%, rgba(158, 198, 232, 0.1) 50%, transparent 100%),
+    url('./assets/background.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
 @utility bg-cta-gradient {
   background: linear-gradient(to right, var(--color-cta-green-from), var(--color-cta-green-to));
 }
