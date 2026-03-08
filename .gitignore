@@ -29,3 +29,10 @@ src/routeTree.gen.ts
 # Cypress
 cypress/videos
 cypress/screenshots
+
+# Calude Files
+CLAUDE.md
+CLAUDE.local.md
+
+#Other Files
+TODO.md
