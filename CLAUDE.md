@@ -29,6 +29,20 @@ npm run cy:run:component # Run component tests only
 - **TanStack Router v1** — file-based routing via `src/routes/`. Route tree is auto-generated into `src/routeTree.gen.ts` (gitignored) by the Vite plugin on every dev/build. Root layout in `src/routes/__root.tsx`.
 - **TanStack Query v5** — `QueryClient` is created in `main.tsx` and passed as router context. Use `useQuery`/`useMutation` in route components.
 
+## Project Structure
+
+```
+src/
+├── auth/         # Authentication logic and guards
+├── components/   # Reusable UI components
+├── contexts/     # React context providers
+├── hooks/        # Custom React hooks
+├── pages/        # Page-level components (consumed by routes)
+├── routes/       # TanStack Router file-based routes
+├── types/        # Shared TypeScript types and interfaces
+└── utils/        # Pure utility/helper functions
+```
+
 ## Code Style
 
 Prettier violations are reported as ESLint **warnings** (not errors). Run `npm run format` before committing to keep the repo clean.
