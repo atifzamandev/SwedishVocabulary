@@ -1,1 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap');
 @import 'tailwindcss';
+
+@theme {
+  /* ── Fonts ─────────────────────────────────────────── */
+  --font-sans: 'Inter', 'Poppins', 'Nunito', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Poppins', 'Inter', ui-sans-serif, sans-serif;
+
+  /* ── Brand Blues ────────────────────────────────────── */
+  --color-brand-navy: #1f4e8c;
+  --color-brand-blue: #2e66b6;
+  --color-brand-blue-dark: #2f5ea8;
+  --color-brand-blue-mid: #3e7bd8;
+  --color-brand-blue-light: #9ec6e8;
+  --color-brand-blue-btn: #3c6ed3;
+  --color-brand-blue-bright: #5da7ff;
+
+  /* ── Text ───────────────────────────────────────────── */
+  --color-text-heading: #1f4e8c;
+  --color-text-subtitle: #3a5c7a;
+  --color-text-muted: #6b7c93;
+
+  /* ── CTA Green ──────────────────────────────────────── */
+  --color-cta-green-from: #6edc64;
+  --color-cta-green-to: #3fae3f;
+  --color-card-btn-green: #4caf50;
+
+  /* ── Category Card Backgrounds ──────────────────────── */
+  --color-card-body: #cfe8ff;
+  --color-card-fruits: #ffe7b5;
+  --color-card-vegetables: #dff4d7;
+  --color-card-groceries: #fff2c8;
+
+  /* ── Layout ─────────────────────────────────────────── */
+  --color-footer-bg: #f3f4f6;
+
+  /* ── Border Radius ──────────────────────────────────── */
+  --radius-card: 14px;
+  --radius-btn: 8px;
+  --radius-btn-lg: 12px;
+}
+
+/* ── Custom Utilities ───────────────────────────────────── */
+@utility bg-nav-gradient {
+  background: linear-gradient(
+    to right,
+    var(--color-brand-blue-dark),
+    var(--color-brand-blue-mid)
+  );
+}
+
+@utility bg-hero-gradient {
+  background: linear-gradient(
+    to bottom,
+    var(--color-brand-blue) 0%,
+    var(--color-brand-blue-light) 55%,
+    #d6ecf7 100%
+  );
+}
+
+@utility bg-cta-gradient {
+  background: linear-gradient(to right, var(--color-cta-green-from), var(--color-cta-green-to));
+}
+
+@utility shadow-cta {
+  box-shadow: 0 4px 16px rgba(63, 174, 63, 0.35);
+}
+
+/* ── Base ───────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-sans);
+  color: var(--color-text-heading);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
