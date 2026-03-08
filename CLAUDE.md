@@ -54,3 +54,6 @@ src/
 - Brand tokens (`bg-brand-blue`, `text-text-heading`, etc.) and gradient utilities (`bg-nav-gradient`, `bg-hero-gradient`, `bg-cta-gradient`, `shadow-cta`) are defined in `src/index.css`.
 - shadcn tokens (`bg-primary`, `text-muted-foreground`, etc.) are also available via CSS variables in `src/index.css`.
 - Prettier violations are reported as ESLint **warnings** (not errors). Run `npm run format` before committing.
+
+# Additional Instructions
+- Always use Tailwind to create components

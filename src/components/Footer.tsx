@@ -1,18 +1,34 @@
+import { buttonVariants } from '@/components/ui/button'
+import { Separator } from '@/components/ui/separator'
+import { cn } from '@/lib/utils'
+
+const footerLinks = [
+  { label: 'About', href: '#' },
+  { label: 'Contact', href: '#' },
+  { label: 'Help', href: '#' },
+]
+
 export default function Footer() {
   return (
-    <footer className="bg-footer-bg flex flex-col sm:flex-row items-center justify-between gap-2 px-6 md:px-15 py-5 sm:py-0 sm:h-20">
-      <div className="text-text-muted flex gap-5 text-sm md:text-base">
-        <a href="#" className="hover:underline">
-          About
-        </a>
-        <a href="#" className="hover:underline">
-          Contact
-        </a>
-        <a href="#" className="hover:underline">
-          Help
-        </a>
+    <footer className="bg-footer-bg">
+      <Separator />
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-2 px-6 md:px-15 py-4 sm:h-16">
+        <nav className="flex items-center gap-1">
+          {footerLinks.map(({ label, href }) => (
+            <a
+              key={label}
+              href={href}
+              className={cn(
+                buttonVariants({ variant: 'link', size: 'sm' }),
+                'text-text-muted hover:text-text-heading px-2'
+              )}
+            >
+              {label}
+            </a>
+          ))}
+        </nav>
+        <p className="text-text-muted text-sm">© 2026 SwedishVocab.com</p>
       </div>
-      <span className="text-text-muted text-sm md:text-base">© 2026 SwedishVocab.com</span>
     </footer>
   )
 }
