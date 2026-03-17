@@ -190,6 +190,36 @@
   box-shadow: 0 4px 16px rgba(63, 174, 63, 0.35);
 }
 
+@keyframes quiz-feedback-in {
+  0% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes quiz-toast-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@utility animate-quiz-feedback {
+  animation: quiz-feedback-in 0.25s ease-out both;
+}
+
+@utility animate-quiz-toast {
+  animation: quiz-toast-in 0.3s ease-out both;
+}
+
 /* ── Base ───────────────────────────────────────────────── */
 @layer base {
   * {
