@@ -1,10 +1,18 @@
+import { useNavigate } from '@tanstack/react-router'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import HeroSection from '@/components/HeroSection'
 import CategoryCard from '@/components/CategoryCard'
-import { CATEGORIES } from '@/utils/constants'
+import { CATEGORIES, CATEGORY_CONFIG } from '@/utils/constants'
+import type { Category } from '@/utils/constants'
 
 export default function HomePage() {
+  const navigate = useNavigate()
+
+  const handleStart = (title: Category) => {
+    navigate({ to: '/quiz/$category', params: { category: CATEGORY_CONFIG[title].slug } })
+  }
+
   return (
     <div className="min-h-screen flex flex-col font-sans">
       {/* ── Header ───────────────────────────────────────── */}
@@ -19,7 +27,13 @@ export default function HomePage() {
         <section className="px-6 pb-16 md:px-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto">
             {CATEGORIES.map(({ title, bg, emoji }) => (
-              <CategoryCard key={title} title={title} bg={bg} emoji={emoji} />
+              <CategoryCard
+                key={title}
+                title={title}
+                bg={bg}
+                emoji={emoji}
+                onStart={() => handleStart(title as Category)}
+              />
             ))}
           </div>
         </section>
