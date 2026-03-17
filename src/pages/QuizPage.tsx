@@ -58,7 +58,7 @@ const QuizPageInner = ({ category }: QuizPageInnerProps) => {
                 )}
 
                 <AnswerGrid />
-                <AnswerInput />
+                <AnswerInput key={currentQuestion?.id} />
                 <FeedbackBanner />
                 <QuizFooter
                   onShowStats={() => setShowStats(true)}

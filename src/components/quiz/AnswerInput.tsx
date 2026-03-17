@@ -7,20 +7,13 @@ export default function AnswerInput() {
   const [value, setValue] = useState('')
   const inputRef = useRef<HTMLInputElement>(null)
 
-  // Reset and re-focus on every new question
-  useEffect(() => {
-    setValue('')
-    inputRef.current?.focus()
-  }, [currentQuestion?.id])
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (status !== 'answering') return
     const typed = e.target.value
     setValue(typed)
 
     // Auto-submit when typed text exactly matches any option (case-insensitive)
-    const matchIndex =
-      currentQuestion?.options.findIndex(opt => opt === typed.trim()) ?? -1
+    const matchIndex = currentQuestion?.options.findIndex((opt) => opt === typed.trim()) ?? -1
 
     if (matchIndex !== -1) {
       selectAnswer(matchIndex)
@@ -41,8 +34,9 @@ export default function AnswerInput() {
   const isAnswered = status !== 'answering'
   const trimmed = value.trim()
   const hasNoMatch =
-    !isAnswered && trimmed.length > 0 &&
-    (currentQuestion?.options.every(opt => opt !== trimmed) ?? false)
+    !isAnswered &&
+    trimmed.length > 0 &&
+    (currentQuestion?.options.every((opt) => opt !== trimmed) ?? false)
 
   return (
     <div className="mt-4">
@@ -52,6 +46,7 @@ export default function AnswerInput() {
         value={value}
         onChange={handleChange}
         disabled={isAnswered}
+        autoFocus
         placeholder="Type the Swedish translation..."
         autoComplete="off"
         autoCorrect="off"
@@ -66,7 +61,12 @@ export default function AnswerInput() {
               : 'bg-white border-brand-blue/40 text-text-heading placeholder:text-gray-400 focus:border-brand-blue focus:shadow-sm'
         )}
       />
-      <p className={cn('text-xs mt-1.5 text-center', hasNoMatch ? 'text-red-500' : 'text-text-muted')}>
+      <p
+        className={cn(
+          'text-xs mt-1.5 text-center',
+          hasNoMatch ? 'text-red-500' : 'text-text-muted'
+        )}
+      >
         {isAnswered
           ? 'Press Enter to continue'
           : hasNoMatch
