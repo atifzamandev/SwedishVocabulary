@@ -4,6 +4,7 @@ import { useQuiz } from '@/hooks/useQuiz'
 import QuizHeader from '@/components/quiz/QuizHeader'
 import QuizProgress from '@/components/quiz/QuizProgress'
 import AnswerGrid from '@/components/quiz/AnswerGrid'
+import AnswerInput from '@/components/quiz/AnswerInput'
 import FeedbackBanner from '@/components/quiz/FeedbackBanner'
 import QuizFooter from '@/components/quiz/QuizFooter'
 import StatsModal from '@/components/quiz/StatsModal'
@@ -57,6 +58,7 @@ const QuizPageInner = ({ category }: QuizPageInnerProps) => {
                 )}
 
                 <AnswerGrid />
+                <AnswerInput />
                 <FeedbackBanner />
                 <QuizFooter
                   onShowStats={() => setShowStats(true)}
