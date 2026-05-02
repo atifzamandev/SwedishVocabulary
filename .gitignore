@@ -36,3 +36,9 @@ CLAUDE.local.md
 
 #Other Files
 TODO.md
+src/assets/Vocab_List.md
+
+# Docker
+Dockerfile
+.dockerignore
+nginx.conf
