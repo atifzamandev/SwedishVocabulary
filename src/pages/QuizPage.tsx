@@ -31,7 +31,7 @@ const QuizPageInner = ({ category }: QuizPageInnerProps) => {
     <div className="min-h-screen flex flex-col">
       <QuizHeader activeCategory={category} />
 
-      <main className="bg-hero-image flex-1 flex items-center justify-center py-8 px-4">
+      <main className="bg-hero-image flex-1 flex items-center justify-center py-4 sm:py-8 px-3 sm:px-4">
         {status === 'finished' ? (
           <ResultScreen />
         ) : (
@@ -44,14 +44,14 @@ const QuizPageInner = ({ category }: QuizPageInnerProps) => {
               </div>
 
               {/* Card body */}
-              <div className="p-5">
+              <div className="p-4 sm:p-5">
                 <QuizProgress />
 
                 {/* Word + emoji display */}
                 {currentQuestion && (
-                  <div className="flex flex-col items-center gap-2 my-6">
-                    <span className="text-8xl leading-none">{currentQuestion.emoji}</span>
-                    <span className="text-3xl font-bold text-text-heading mt-1">
+                  <div className="flex flex-col items-center gap-2 my-4 sm:my-6">
+                    <span className="text-6xl sm:text-8xl leading-none">{currentQuestion.emoji}</span>
+                    <span className="text-2xl sm:text-3xl font-bold text-text-heading mt-1">
                       {currentQuestion.englishWord}
                     </span>
                   </div>

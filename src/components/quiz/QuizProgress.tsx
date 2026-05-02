@@ -6,7 +6,7 @@ export default function QuizProgress() {
   const questionNumber = Math.min(currentIndex + 1, totalQuestions)
 
   return (
-    <div className="flex items-start justify-between gap-4 mb-4">
+    <div className="flex items-start justify-between gap-2 sm:gap-4 mb-3 sm:mb-4">
       {/* Segmented progress bar */}
       <div className="flex-1">
         <div className="flex items-center justify-between mb-1.5">
@@ -33,7 +33,7 @@ export default function QuizProgress() {
       </div>
 
       {/* Score & Lives */}
-      <div className="flex items-center gap-3 text-sm font-semibold shrink-0 pt-1">
+      <div className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm font-semibold shrink-0 pt-1">
         <span className="text-green-600 flex items-center gap-1">
           <span>✓</span>
           <span className="tabular-nums">{score}</span>

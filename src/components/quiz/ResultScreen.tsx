@@ -59,12 +59,12 @@ export default function ResultScreen() {
   const categorySlug = category ? CATEGORY_CONFIG[category].slug : null
 
   return (
-    <div className="bg-white rounded-card shadow-2xl w-full max-w-md p-8 text-center mx-4 animate-quiz-feedback">
+    <div className="bg-white rounded-card shadow-2xl w-full max-w-md p-5 sm:p-8 text-center mx-2 sm:mx-4 animate-quiz-feedback">
       {/* Grade badge */}
       <div
-        className={cn('inline-flex items-center justify-center w-24 h-24 rounded-full mb-4', bg)}
+        className={cn('inline-flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 rounded-full mb-3 sm:mb-4', bg)}
       >
-        <span className={cn('text-6xl font-black', color)}>{grade}</span>
+        <span className={cn('text-5xl sm:text-6xl font-black', color)}>{grade}</span>
       </div>
 
       <p className="text-xl font-bold text-text-heading mb-1">{message}</p>
@@ -80,15 +80,15 @@ export default function ResultScreen() {
       )}
 
       {/* Stats grid */}
-      <div className="grid grid-cols-3 gap-3 mb-6">
+      <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-5 sm:mb-6">
         {[
           { label: 'Score', value: score, icon: '🪙' },
           { label: 'Correct', value: `${correctCount}/${totalQuestions}`, icon: '✅' },
           { label: 'Best Streak', value: maxStreak, icon: '🔥' },
         ].map(({ label, value, icon }) => (
-          <div key={label} className="bg-blue-50 rounded-btn p-3">
-            <div className="text-2xl mb-1">{icon}</div>
-            <div className="font-bold text-text-heading text-lg tabular-nums">{value}</div>
+          <div key={label} className="bg-blue-50 rounded-btn p-2 sm:p-3">
+            <div className="text-xl sm:text-2xl mb-1">{icon}</div>
+            <div className="font-bold text-text-heading text-base sm:text-lg tabular-nums">{value}</div>
             <div className="text-xs text-text-muted">{label}</div>
           </div>
         ))}
@@ -122,7 +122,7 @@ export default function ResultScreen() {
       )}
 
       {/* Actions */}
-      <div className="flex gap-3">
+      <div className="flex flex-col sm:flex-row gap-3">
         <Button
           onClick={handlePlayAgain}
           disabled={!categorySlug}

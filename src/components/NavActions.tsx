@@ -7,7 +7,7 @@ export default function NavActions() {
       <Button
         className={cn(
           'bg-brand-blue-btn hover:bg-brand-blue-btn/90 text-white',
-          'text-sm md:text-base font-medium px-4 md:px-6 h-10 rounded-btn cursor-pointer'
+          'text-xs sm:text-sm md:text-base font-medium px-3 sm:px-4 md:px-6 h-9 sm:h-10 rounded-btn cursor-pointer'
         )}
       >
         Log In
@@ -15,7 +15,7 @@ export default function NavActions() {
       <Button
         className={cn(
           'bg-brand-blue-bright hover:bg-brand-blue-bright/90 text-white',
-          'text-sm md:text-base font-medium px-4 md:px-6 h-10 rounded-btn cursor-pointer'
+          'text-xs sm:text-sm md:text-base font-medium px-3 sm:px-4 md:px-6 h-9 sm:h-10 rounded-btn cursor-pointer'
         )}
       >
         Sign Up

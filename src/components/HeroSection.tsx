@@ -11,7 +11,7 @@ export default function HeroSection() {
         Improve your Swedish vocabulary through fun, interactive games free!
       </p>
 
-      <Button className="bg-cta-gradient shadow-cta w-60 h-15 text-white font-bold text-lg md:text-[22px] rounded-btn-lg transition-transform hover:scale-105 active:scale-95 cursor-pointer">
+      <Button className="bg-cta-gradient shadow-cta w-full max-w-xs h-14 sm:h-15 text-white font-bold text-base sm:text-lg md:text-[22px] rounded-btn-lg transition-transform hover:scale-105 active:scale-95 cursor-pointer">
         Start Learning
       </Button>
     </section>
