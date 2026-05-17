@@ -22,14 +22,14 @@ export default function QuizFooter({ onShowStats, onShowAchievements }: QuizFoot
       <div className="flex items-center gap-2">
         <button
           onClick={onShowStats}
-          className="flex items-center gap-1.5 px-3 py-2 rounded-btn border border-gray-200 hover:bg-gray-50 text-text-muted text-sm font-medium transition-colors cursor-pointer"
+          className="flex items-center gap-1.5 min-w-11 min-h-11 px-3 py-2.5 rounded-btn border border-gray-200 hover:bg-gray-50 text-text-muted text-sm font-medium transition-colors cursor-pointer"
         >
           <span>📊</span>
           <span className="hidden sm:inline">Stats</span>
         </button>
         <button
           onClick={onShowAchievements}
-          className="flex items-center gap-1.5 px-3 py-2 rounded-btn border border-gray-200 hover:bg-gray-50 text-text-muted text-sm font-medium transition-colors cursor-pointer"
+          className="flex items-center gap-1.5 min-w-11 min-h-11 px-3 py-2.5 rounded-btn border border-gray-200 hover:bg-gray-50 text-text-muted text-sm font-medium transition-colors cursor-pointer"
         >
           <span>🏆</span>
           <span className="hidden sm:inline">Achievements</span>

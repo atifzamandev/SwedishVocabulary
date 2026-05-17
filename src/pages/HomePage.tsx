@@ -24,8 +24,8 @@ export default function HomePage() {
         <HeroSection />
 
         {/* Category Cards */}
-        <section className="px-6 pb-16 md:px-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto">
+        <section className="px-4 pb-10 sm:px-6 sm:pb-14 md:px-12 md:pb-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 max-w-5xl mx-auto">
             {CATEGORIES.map(({ title, bg, emoji }) => (
               <CategoryCard
                 key={title}

@@ -11,9 +11,9 @@ interface CategoryCardProps {
 export default function CategoryCard({ title, emoji, bg, onStart }: CategoryCardProps) {
   return (
     <div
-      className={cn(bg, 'rounded-card min-h-55 shadow-md flex flex-col items-center p-4 md:p-5')}
+      className={cn(bg, 'rounded-card min-h-48 sm:min-h-55 shadow-md flex flex-col items-center p-3 sm:p-4 md:p-5')}
     >
-      <div className="flex-1 flex items-center justify-center text-6xl md:text-7xl py-3">
+      <div className="flex-1 flex items-center justify-center text-5xl sm:text-6xl md:text-7xl py-2 sm:py-3">
         {emoji}
       </div>
       <p className="text-text-heading font-bold text-sm md:text-base mb-3 text-center">{title}</p>

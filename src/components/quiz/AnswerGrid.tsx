@@ -36,7 +36,7 @@ export default function AnswerGrid() {
           disabled={status !== 'answering'}
           onClick={() => selectAnswer(index)}
           className={cn(
-            'flex items-center gap-2.5 px-4 py-3 border-2 rounded-btn text-left font-medium transition-all duration-200',
+            'flex items-center gap-2 sm:gap-2.5 px-3 sm:px-4 py-3.5 sm:py-3 border-2 rounded-btn text-left font-medium transition-all duration-200',
             getOptionStyle(index)
           )}
         >
